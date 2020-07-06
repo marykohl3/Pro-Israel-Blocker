@@ -13,9 +13,10 @@ the submissions instructions! Thanks!
 2) Select the CODE button on the right hand side
 3) Select DOWNLOAD ZIP
 4) Type "chrome://extensions/" into your search bar
-5) Select LOAD UNPACKED in the left hand corner
-6) Select the unzipped file
-7) Confirm that it is on
+5) Make sure DEVELOPER MODE is on in the top right corner
+6) Select LOAD UNPACKED in the left hand corner
+7) Select the unzipped file
+8) Confirm that it is on
 
 # Submissions
 To submit a company or product or report an issue please:
