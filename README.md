@@ -7,7 +7,7 @@ This project is based off of Prison Block: https://github.com/teddylambert/Priso
 If you know of a project similar to this, please send it my way following
 the submissions instructions! Thanks!
 
-# Instal
+# Install
 1) Visit https://github.com/marykohl3/ProIsraelWebBlocker
 2) Select the CODE button on the right hand side
 3) Select DOWNLOAD ZIP
