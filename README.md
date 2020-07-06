@@ -18,7 +18,7 @@ the submissions instructions! Thanks!
 
 # Submissions
 To submit a company or product or report an issue please:
-1) Go to https://github.com/marykohl3/WebBlocker/issues
+1) Go to https://github.com/marykohl3/Pro-Israel-Blocker
 2) Include 1 or more reliable sources to support your claim. Ideally, the source
 would be less than 2 years old.
 
