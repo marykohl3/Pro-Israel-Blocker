@@ -11,7 +11,7 @@ the submissions instructions! Thanks!
 * Please make sure you are on a computer using Google Chrome *
 1) Visit https://github.com/marykohl3/Pro-Israel-Blocker
 2) Select the CODE button on the right hand side
-3) Select DOWNLOAD ZIP
+3) Select DOWNLOAD ZIP and unzip your file by locating it in your Downloads folder and double clicking
 4) Type "chrome://extensions/" into your search bar
 5) Make sure DEVELOPER MODE is on in the top right corner
 6) Select LOAD UNPACKED in the left hand corner
