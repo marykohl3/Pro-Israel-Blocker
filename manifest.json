@@ -1,0 +1,25 @@
+{
+  "name": "Pro-Israel Blocker",
+  "version": "1.0",
+  "description": "Blocks companies and products that support companies that are pro-Israel",
+  "manifest_version": 2,
+  "background":
+  {
+    "scripts":["background.js"],
+    "persistent": true
+
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js":["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "<all_urls>",
+    "background"
+  ]
+}
