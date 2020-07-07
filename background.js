@@ -1,42 +1,47 @@
-var proIsraelCompanies = "https://raw.githubusercontent.com/marykohl3/Pro-Israel-Blocker/master/proIsraelCompanies.json"
-var proIsraelHosts = null;
+/*
+Mary Kohl
+code adapted from https://github.com/teddylambert/PrisonBlock
+*/
 
-async function updateSites() {
-  return new Promise((resolve, reject) => {
-    var xhr = new XMLHttpRequest();
-    xhr.addEventListener('load', () => {
-      if (xhr.status !== 200) {
-        proIsraelHosts = null;
-        resolve();
-        return;
-      }
-      proIsraelHosts = JSON.parse(xhr.responseText);
-      resolve();
-    });
-    xhr.open("GET", proIsraelCompanies);
-    xhr.send();
-  });
-}
+  var proIsraelCompanies = "https://raw.githubusercontent.com/marykohl3/Pro-Israel-Blocker/master/proIsraelCompanies.json"
+  var proIsraelHosts = null;
 
-chrome.tabs.onUpdated.addListener(async (tabId, info, changeInfo) => {
-  if (info.status === 'complete') {
-    var url = new URL(changeInfo.url);
-    hostString = String(url.hostname);
-    if (!proIsraelHosts) await updateSites(); // If sites not found, load them.
-    if (!proIsraelHosts) return; // Sites still not found, ignore filter.
-    if (hostString in proIsraelHosts) {
-      d = new Date();
-      curTime = d.getTime();
-      if (curTime >= (proIsraelHosts[hostString] + 3600000)) {
-        var r = confirm(' STOP! \n This company is pro-Israel.\n Please try to find an alternative brand and company to support.\n\nClick OK to continue\nClick CANCEL to go back\n\nGo to http://bdslist.org/ to learn more');
-        if(r == false) {
-          chrome.tabs.goBack();
+  async function updateSites() {
+    return new Promise((resolve, reject) => {
+      var xhr = new XMLHttpRequest();
+      xhr.addEventListener('load', () => {
+        if (xhr.status !== 200) {
+          proIsraelHosts = null;
+          resolve();
+          return;
         }
-        proIsraelHosts[hostString] = curTime;
+        proIsraelHosts = JSON.parse(xhr.responseText);
+        resolve();
+      });
+      xhr.open("GET", proIsraelCompanies);
+      xhr.send();
+    });
+  }
+
+  chrome.tabs.onUpdated.addListener(async (tabId, info, changeInfo) => {
+    if (info.status === 'complete') {
+      var url = new URL(changeInfo.url);
+      hostString = String(url.hostname);
+      if (!proIsraelHosts) await updateSites();
+      if (!proIsraelHosts) return;
+      if (hostString in proIsraelHosts) {
+        d = new Date();
+        curTime = d.getTime();
+        if (curTime >= (proIsraelHosts[hostString] + 3600000)) {
+          var r = confirm(' STOP! \n This company is pro-Israel.\n Please try to find an alternative brand and company to support.\n\nClick OK to continue\nClick CANCEL to go back\n\nGo to http://bdslist.org/ to learn more');
+          if(r == false) {
+            chrome.tabs.goBack();
+          }
+          proIsraelHosts[hostString] = curTime;
+        }
       }
     }
-  }
-});
+  });
 
 
-updateSites();
+  updateSites();
