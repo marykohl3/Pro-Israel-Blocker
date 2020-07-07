@@ -21,6 +21,9 @@ the submissions instructions! Thanks!
 7) Select the unzipped file
 8) Confirm that it is on
 
+# Companies
+Blocked companies and products are based off of http://bdslist.org/
+
 # Submissions
 To submit a company or product or report an issue please:
 1) Go to https://github.com/marykohl3/Pro-Israel-Blocker
