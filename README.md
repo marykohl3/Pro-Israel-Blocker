@@ -1,5 +1,5 @@
 # Pro-Israel Company and Product Blocker
-![Image of Logo](icons/BI_sticker.png)
+![Image of Logo](images/BI_sticker.png)
 This Google Chrome extension alerts users when they are on a site or view a product
 from a company that is pro-Israel.
 
