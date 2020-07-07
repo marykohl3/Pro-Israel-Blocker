@@ -30,6 +30,11 @@ To submit a company or product or report an issue please:
 2) Include 1 or more reliable sources to support your claim. Ideally, the source
 would be less than 2 years old.
 
+# Known Bugs
+- does not work on Target.com
+- filters listicles online - you will need to turn off the extension
+  and refresh your page
+
 ## Version 1.0
 - A pop-up will appear if you are on a site of a company that is Pro-Israel
 - Any companies or brands that are pro-Israel are replaced with PRO-ISRAEL BLOCKER  
