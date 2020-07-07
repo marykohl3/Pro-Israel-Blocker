@@ -15,22 +15,22 @@ chrome.runtime.onInstalled.addListener(function() {
   });
 });
 
-  var proIsraelCompanies = "https://raw.githubusercontent.com/marykohl3/Pro-Israel-Blocker/master/proIsraelCompanies.json"
-  var proIsraelHosts = null;
+  var blockedCompanies = "https://raw.githubusercontent.com/marykohl3/Anti-Apartheid-Blocker/master/blockedCompanies.json"
+  var blockedHosts = null;
 
   async function updateSites() {
     return new Promise((resolve, reject) => {
       var xhr = new XMLHttpRequest();
       xhr.addEventListener('load', () => {
         if (xhr.status !== 200) {
-          proIsraelHosts = null;
+          blockedHosts = null;
           resolve();
           return;
         }
-        proIsraelHosts = JSON.parse(xhr.responseText);
+        blockedHosts = JSON.parse(xhr.responseText);
         resolve();
       });
-      xhr.open("GET", proIsraelCompanies);
+      xhr.open("GET", blockedCompanies);
       xhr.send();
     });
   }
@@ -38,18 +38,17 @@ chrome.runtime.onInstalled.addListener(function() {
   chrome.tabs.onUpdated.addListener(async (tabId, info, changeInfo) => {
     if (info.status === 'complete') {
       var url = new URL(changeInfo.url);
-      hostString = String(url.hostname);
-      if (!proIsraelHosts) await updateSites();
-      if (!proIsraelHosts) return;
-      if (hostString in proIsraelHosts) {
-        d = new Date();
-        curTime = d.getTime();
-        if (curTime >= (proIsraelHosts[hostString] + 3600000)) {
-          var r = confirm(' STOP! \n This company is pro-Israel.\n Please try to find an alternative brand and company to support.\n\nClick OK to continue\nClick CANCEL to go back\n\nGo to http://bdslist.org/ to learn more');
+      hostStr = String(url.hostname);
+      if (!blockedHosts) await updateSites();
+      if (!blockedHosts) return;
+      if (hostStr in blockedHosts) {
+        date = new Date();
+        if (date.getTime() >= (blockedHosts[hostStr] + 3600000)) {
+          var r = confirm(' STOP! \nThis company is complicit in violations of Palestinian rights.\nPlease try to find an alternative brand and company to support.\n\nClick OK to continue\nClick CANCEL to go back\n\nGo to http://bdslist.org/ to learn more');
           if(r == false) {
             chrome.tabs.goBack();
           }
-          proIsraelHosts[hostString] = curTime;
+          blockedHosts[hostStr] = date.getTime();
         }
       }
     }
