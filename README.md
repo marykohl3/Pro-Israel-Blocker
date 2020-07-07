@@ -35,3 +35,7 @@ would be less than 2 years old.
 - Any companies or brands that are pro-Israel are replaced with PRO-ISRAEL BLOCKER  
   * note that this may not work on all websites, please make a submission if you
     notice this and any documentation to fix this error is more than welcome
+    
+## Version 2.0
+- Fixed bugs
+- Icon now included
