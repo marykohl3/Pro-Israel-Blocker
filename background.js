@@ -3,6 +3,18 @@ Mary Kohl
 code adapted from https://github.com/teddylambert/PrisonBlock
 */
 
+chrome.runtime.onInstalled.addListener(function() {
+  chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
+    chrome.declarativeContent.onPageChanged.addRules([{
+      conditions: [new chrome.declarativeContent.PageStateMatcher({
+        pageUrl: {hostEquals: 'developer.chrome.com'},
+      })
+      ],
+          actions: [new chrome.declarativeContent.ShowPageAction()]
+    }]);
+  });
+});
+
   var proIsraelCompanies = "https://raw.githubusercontent.com/marykohl3/Pro-Israel-Blocker/master/proIsraelCompanies.json"
   var proIsraelHosts = null;
 
