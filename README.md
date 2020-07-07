@@ -5,7 +5,7 @@
 This Google Chrome extension alerts users when they are on a site or view a product
 from a company that is pro-Israel.
 
-This project is based off of Prison Block: https://github.com/teddylambert/PrisonBlock/
+This project is based off of and uses code from Prison Block: https://github.com/teddylambert/PrisonBlock/
 
 If you know of a project similar to this, please send it my way following
 the submissions instructions! Thanks!
