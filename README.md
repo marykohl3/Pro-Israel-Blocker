@@ -44,3 +44,4 @@ would be less than 2 years old.
 ## Version 2.0
 - Fixed bugs
 - Icon now included
+- Pop-up informs user how to disable extension
