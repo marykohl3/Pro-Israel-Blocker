@@ -11,7 +11,7 @@ If you know of a project similar to this, please send it my way following
 the submissions instructions! Thanks!
 
 # Install
-* Please make sure you are on a computer using Google Chrome *
+* Please make sure you are on a computer using Google Chrome
 1) Visit https://github.com/marykohl3/Pro-Israel-Blocker
 2) Select the CODE button on the right hand side
 3) Select DOWNLOAD ZIP and unzip your file by locating it in your Downloads folder and double clicking
