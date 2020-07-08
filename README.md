@@ -1,4 +1,5 @@
 # Anti-Apartheid Blocker
+![Anti-Apartheid Blocker Logo](/images/BI_128.png)
 
 This Google Chrome extension alerts users when they are on a site or view a product
 from a company that is complicit in violations of Palestinian rights.
