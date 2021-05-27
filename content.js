@@ -29,9 +29,6 @@ function replaceText(textNode) {
 
   val = val.replace(/\bBen and Jerry's\b/g, antiApartheid);
   val = val.replace(/\bBen & Jerry's\b/g, antiApartheid);
-  val = val.replace(/\bCompany\b/g, antiApartheid);
-  val = val.replace(/\bcompany\b/g, antiApartheid);
-  val = val.replace(/\bCOMPANY\b/g, antiApartheid);
   val = val.replace(/\bSodaStream\b/g, antiApartheid);
   val = val.replace(/\bsodastream\b/g, antiApartheid);
   val = val.replace(/\bSODASTREAM\b/g, antiApartheid);
