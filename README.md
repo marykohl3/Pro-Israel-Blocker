@@ -45,4 +45,8 @@ would be less than 2 years old.
 - Icon now included
 - Pop-up informs user how to disable extension
 
+## Version 3.0
+- Updated BDS List
+- Bugs still with pop-up: seeking help if interested contact me!
+
 THANK YOU! To everyone that helped contribute to this!
