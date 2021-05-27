@@ -49,4 +49,7 @@ would be less than 2 years old.
 - Updated BDS List
 - Bugs still with pop-up: seeking help if interested contact me!
 
+# STAY UPDATED!
+Want to know about the latest update or how to help with this extension? Email me at marykohl3@gmail.com
+
 THANK YOU! To everyone that helped contribute to this!
